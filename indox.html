@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            background-color: blanchedalmond;
+        }
+        button {
+            background-color: darkorchid;
+            color: antiquewhite;
+            width: 30px;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<table border="1" style="width: 500px">
+    <tr>
+        <td style="text-align: center" colspan="4"><input id="maytinh" type="text"></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="inputC('1')">1</button>
+        </td>
+        <td>
+            <button onclick="inputC('2')">2</button>
+        </td>
+        <td>
+            <button onclick="inputC('3')">3</button>
+        </td>
+        <td>
+            <button onclick="inputC('+')">+</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <button onclick="inputC('4')">4</button>
+        </td>
+        <td>
+            <button onclick="inputC('5')">5</button>
+        </td>
+        <td>
+            <button onclick="inputC('6')">6</button>
+        </td>
+        <td>
+            <button onclick="inputC('-')">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="inputC('7')">7</button>
+        </td>
+        <td>
+            <button onclick="inputC('8')">8</button>
+        </td>
+        <td>
+            <button onclick="inputC('9')">9</button>
+        </td>
+        <td>
+            <button onclick="inputC('0')">0</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="bang ()">=</button>
+        </td>
+        <td>
+            <button onclick="xoa ()">C</button>
+        </td>
+        <td>
+            <button onclick="inputC('/')">/</button>
+        </td>
+        <td>
+            <button onclick="inputC('*')">x</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function inputC(input) {
+        document.getElementById('maytinh').value += input;
+    }
+
+    function bang () {
+        let input = document.getElementById('maytinh').value;
+        let bang = eval(input);
+        document.getElementById('maytinh').value = bang;
+    }
+
+    function xoa () {
+        document.getElementById('maytinh').value = '';
+    }
+</script>
+</body>
+</html>
